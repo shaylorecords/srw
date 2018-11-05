@@ -1,0 +1,1516 @@
+body{
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-moz-selection{
+    text-shadow: none;
+}
+
+::selection{
+    text-shadow: none;
+}
+
+/* =======================================================================
+Theme CSS - HELPER
+========================================================================== */
+.theme-heading-title{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.theme-heading-description{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.slick-prev:hover, 
+.slick-next:hover{ 
+    outline: none; 
+    background: transparent; 
+    color: transparent; 
+}
+
+.slick-prev:before, 
+.slick-next:before { 
+    font-family: "FontAwesome"; 
+    font-size: 30px; 
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+/* =======================================================================
+Theme CSS - Dimension 1200px
+========================================================================== */
+@media only screen and (min-width: 1200px) {
+	#theme-services .row .grid_2{
+        display: table-cell !important;
+        width:25% !important;
+        border-top:0px !important;
+        border-left: 0px !important;
+        padding-left:32px !important;
+        padding-right:32px !important;
+        text-align: center !important;
+        vertical-align: top !important;
+        float:left !important;
+    }
+}
+
+
+/* ======================================== */
+/* NORMAL STYLE */
+/* ======================================== */
+#side_menu{
+  z-index: 9999;
+  position: fixed;
+  width: 390px;
+  height: 100%;
+  top:0;
+}
+
+.side_menu_container{
+  overflow: auto;
+  height: 100%;
+  padding: 45px 50px 55px 60px;
+  font-family: 'Roboto',sans-serif !important;
+  -webkit-transform: translateZ(0px);
+}
+
+/* SIDE MENU BUTTON */
+.side_menu_item .side_menu_button{
+    display: inline-block;
+    white-space: nowrap;
+    padding: 8px 13px;
+}
+
+/* SEARCH */
+.side_menu_item_search form{
+    border: 0px;
+    width: 100%;
+    padding-right: 5px;
+    margin-top: -5px;
+}
+
+.side_menu_item_search input[type="text"]{
+    border: 0px;
+    width: 86%;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 11px 16px;
+}
+
+.side_menu_item_search button{
+    border: 0px;
+    font-size: 15px;
+}
+
+.side_menu_item_title{
+    font-size: 19px;
+    margin-bottom: 25px;
+    padding-bottom: 17px;
+}
+
+.side_menu_item_social ul li a i{
+    display: block;
+    vertical-align: middle;
+    transition: all 0.3s ease 0s;
+    padding: 12px 0px;
+}
+
+/* TWITTER */
+.twitter-content{
+    margin-bottom: 17px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 27px;
+}
+
+/* FACEBOOK PAGE */
+#side_menu_facebook{
+    padding-bottom: 9px;
+}
+
+.side_menu_responsive ul li a{
+    display: block;
+}
+
+.side_menu_item_extra h1, 
+.side_menu_item_extra h2, 
+.side_menu_item_extra h3, 
+.side_menu_item_extra h4, 
+.side_menu_item_extra h5, 
+.side_menu_item_extra h6{
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
+.side_menu_item_extra blockquote{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 14px 0px 15px 15px;
+    padding: 0px 0px 0px 21px;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.side_menu_item_extra small {
+    font-size: 16px;
+}
+
+/* =======================================================================
+Theme CSS - NAVIGATION
+========================================================================== */
+#theme-navigation ul li a{
+    display:block;
+    font-size:16px;
+}
+
+#theme-navigation ul li ul li a{
+    font-family:'Lato',sans-serif;
+    font-size: 16px;
+    width: 225px;
+    padding: 16px 21px;    
+    border-top: 0;
+}
+
+#theme-navigation ul li ul li a:hover{
+    padding-left:28px;
+}
+
+#theme-navigation.smaller{ 
+    padding:31px 0px; 
+}
+
+/* DROPDOWN 1 */
+#theme-navigation.smaller ul li.focused1:hover .focused2{
+    border-bottom: 0px;
+    background:inherit;
+}
+
+#theme-navigation.smaller ul li ul li a:hover{
+    padding-left:28px;
+}
+
+.theme-nav-logo h1 a{
+    font-size:30px;
+    line-height: 1;
+}
+/* ==== THEME SLIDER - CAPTION ==== */
+
+/* =======================================================================
+Theme CSS - SERVICES
+========================================================================== */
+#theme-services{
+    padding: 65px 0px; 
+}
+
+.theme-service-icon i {
+    font-size: 80px;
+}
+
+.theme-serivce-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.theme-service-description {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+/* =======================================================================
+Theme CSS - POSTS LOOPING
+========================================================================== */
+#theme-posts{
+    font-family: 'Roboto',sans-serif;
+    padding: 80px 0px 86px;
+}
+
+/* ======= PAGING ======== */
+#loading_pagination {
+    text-align: center;
+    font-size: 17px;
+}
+
+#theme-posts-pagination a{
+    display: inline-block;
+    white-space: nowrap;
+    padding: 18px 29px;
+    font-size: 17px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.posts-heading-title{
+    font-size: 29px;
+    line-height: 39px;
+    margin-bottom: 8px;
+    font-family: 'montserrat',sans-serif;
+    font-weight: 700;
+}
+
+.posts-heading-description{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    font-style: italic;
+    font-family: 'Lato',sans-serif;
+}
+
+#posts-filters{
+    font-family: 'Lato',sans-serif;
+}
+
+#post-filters ul li a{
+    padding: 12px 22px;
+    display: inline-block;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    white-space: nowrap;
+}
+
+.theme-posts-search {
+    padding: 21px 21px;
+    font-size: 16px;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 42px;
+}
+
+/* ===== POST OVERLAY ===== */
+.theme-posts-item-content a:hover .overlay{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.post-entry .post-overlay-caption-button a i{
+    border-radius: 50%;
+    font-size: 25px;
+    width: 73px;
+    height: 73px;
+    display: table-cell;
+    vertical-align: middle;
+    transition: ease .4s;
+    -webkit-transition: ease .3s;
+    -moz-transition: ease .3s;
+}
+
+/* TEXT */
+.post-text{
+    position: relative;
+}
+
+.post-text-body{
+    padding: 23px 30px;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 300;
+    height: 264px;
+    overflow: hidden;
+}
+
+.post-text-body h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 29px;
+    padding-top: 0;
+    margin-bottom: 9px;
+}
+
+.permalink_button .left{
+    padding-left:22px;
+    padding: 14px 0px 0px 23px;
+}
+
+.permalink_button .left i{
+    margin-right: 5px;
+}
+
+.permalink_button a.view_tag{
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.permalink_button a.view_more{
+    padding: 15px 21px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.post-text-first-image-hover{
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    padding: 27px 37px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 15px;
+}
+
+.post-text-first-caption-button a {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 11px 18px;
+    border-radius: 3px;
+}
+
+.post-text-first-caption-title{
+    font-size: 19px;
+    margin-bottom: 8px;
+    line-height: 30px;
+}
+
+.post-text-first-caption-body{
+    font-weight: 300;
+    line-height: 27px;
+    font-size: 16px;
+    height: 133px;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+
+/* QUOTE */
+.post-quote{
+    padding: 28px 35px;
+    position: relative;
+}
+
+.post-quote-body:before {
+    font-family: 'FontAwesome';
+    content: '\f10d';
+    font-size: 25px;
+    margin-bottom: 9px;
+    display: block;
+}
+
+.post-quote-body{
+    line-height: 32px;
+    font-size: 20px;
+    height: 256px;
+    overflow: hidden;
+}
+
+.post-quote-source{
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    padding-right: 33px;
+    padding-bottom: 28px;
+}
+
+/* LINK */
+.post-link{
+    position: relative;
+}
+
+.post-link a{
+    padding: 33px 35px;
+    display: block;
+}
+
+.post-link-body:before {
+    font-family: 'FontAwesome';
+    content: '\f08e';
+    font-size: 27px;
+    margin-bottom: 13px;
+    display: block;
+}
+
+.post-link-title{
+    line-height: 32px;
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.post-link-description{
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    height: 167px;
+    overflow: hidden;
+}
+
+
+/* CHAT */
+.post-chat{
+    position: relative;
+}
+
+.post-chat a{
+    display: block;
+}
+
+.post-chat-body{
+    padding: 31px 35px;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 300;
+    height: 309px;
+    overflow: hidden;
+}
+
+.post-chat-body-title h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+    padding-top: 0;
+    margin-bottom: 9px;
+}
+
+.post-chat-body:before {
+    font-family: 'FontAwesome';
+    content: '\f075';
+    font-size: 27px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.post-chat-body-content ul.chat {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.post-chat-body-content ul.chat li {
+    margin-bottom: 2px;
+}
+
+.post-chat-body-content ul.chat li .label{
+    font-weight: 400;
+    margin-right: 7px;
+}
+
+
+/* ANSWER */
+.post-answer{
+    position: relative;
+}
+
+.post-answer-body{
+    padding: 23px 27px;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 300;
+    height: 296px;
+    overflow: hidden;
+}
+
+.post-answer .permalink_button{
+    text-align: right;
+}
+
+.asker-question {
+    padding: 13px 19px;
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-bottom: 14px;
+}
+
+.answerer,
+.asker{
+    font-weight: 400;
+}
+
+.answerer-answer {
+    margin-top: 4px;
+}
+
+.post-answer-body strong{
+    font-weight: 400;
+}
+
+.post-answer-body em{
+    font-style: italic;
+}
+
+.post-answer-body blockquote{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 14px 0px 15px 2px;
+}
+
+.post-answer-body img{
+    max-width: 100%;
+}
+
+.post-answer-body h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 29px;
+    padding-top: 0;
+    margin-bottom: 9px;
+}
+
+/* AUDIO AND VIDEO */
+.post-audio-video{
+    position: relative;
+    overflow: hidden;
+    cursor:pointer;
+}
+
+.post-audio-video:hover .post-overlay{
+    opacity: 1;
+    filter: alpha(opacity=100);
+    z-index:10;
+    cursor:pointer;
+}
+
+.post-audio-video .post-overlay-caption-button a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.post-audio-video .post-overlay-caption-button a i{
+    border-radius: 50%;
+    font-size: 25px;
+    width: 73px;
+    height: 73px;
+    display: table-cell;
+    vertical-align: middle;
+    transition: ease .4s;
+    -webkit-transition: ease .3s;
+    -moz-transition: ease .3s;
+}
+
+
+/* POST OVERLAY */
+.post-overlay{
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    padding: 27px 37px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+}
+
+.post-overlay-caption {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.post-overlay-caption-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.post-overlay-caption-button {
+    display: inline-block;
+    text-align: center;
+}
+
+/* =======================================================================
+Theme CSS - FULL SECTION
+========================================================================== */
+#theme-full-section{
+    padding: 63px 0px 66px;
+}
+
+/* HEADING - FULL SECTION */
+.theme-heading-full-section{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.heading-full-section-title{
+    font-size: 30px;
+    line-height: 40px;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 13px;
+}
+
+.heading-full-section-description{
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 300;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* =======================================================================
+Theme CSS - ABOUT
+========================================================================== */
+#theme-about{
+    padding: 55px 0px 68px;
+}
+
+.theme-about-heading-title{
+    font-family: 'Roboto',sans-serif;
+    font-size: 23px;
+    line-height: 37px;
+}
+
+.theme-about-description{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.theme-about-description a {
+    font-weight: 400;
+}
+
+.theme-about-button a{
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 3px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    margin-right:11px;
+    white-space: nowrap;
+}
+
+/* =======================================================================
+Theme CSS - ACTIVITY
+========================================================================== */
+#theme-activity{
+    padding: 54px 0px 73px;
+}
+
+.activity-heading-title{
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    font-size: 27px;
+    line-height: 38px;
+    float: left;
+    white-space: nowrap;
+}
+
+.activity-nav a i{
+    border-radius: 50%;
+    font-size: 20px;
+    width: 38px;
+    height: 38px;
+    display: table-cell;
+    vertical-align: middle;
+    transition: ease .2s;
+    -webkit-transition: ease .2s;
+    -moz-transition: ease .2s;
+}
+
+.activity-right-icon i{
+    display: table-cell;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    transition: ease .3s;
+    -webkit-transition: ease .3s;
+    -moz-transition: ease .3s;
+}
+
+.activity-right-text{
+    line-height: 26px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.activity-right-item-title {
+    font-family: 'Roboto',sans-serif;
+    font-size: 19px;
+    margin-bottom: 7px;
+    line-height: 28px;
+}
+
+.activity-right-item-description {
+    line-height: 24px;
+}
+
+/* =======================================================================
+Theme CSS - PARTNERS
+========================================================================== */
+#theme-partners{
+    padding: 55px 0px 90px;
+}
+
+.theme-partners-heading-title{
+    font-family: 'Roboto',sans-serif;
+    font-size: 29px;
+    line-height: 39px;
+    margin-bottom: 21px;
+}
+
+/* bullet */
+.theme-partners-line{
+    height: 2px;
+    width: 300px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.theme-partners-line-bullet{
+    height: 5px;
+    width: 80px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: -1px;
+    left: 0;
+    right: 0;
+}
+
+.theme-partners-slider .slick-dots li button:before{
+    font-size: 10px;
+}
+
+.partners-content-title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom: 7px;
+}
+
+.partners-content-description{
+    line-height: 24px;
+}
+
+.partners-content-button a{
+    display: inline-block;
+    padding: 10px 19px;
+    border-radius: 3px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    margin-right: 11px;
+    white-space: nowrap;
+}
+
+/* =======================================================================
+Theme CSS - CALL TO ACTION
+========================================================================== */
+#theme-call-to-action{
+    padding: 65px 0px 92px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.call-to-action-1{
+    font-size: 29px;
+    line-height: 46px;
+    margin-bottom: 30px;
+}
+
+.call-to-action-border-line{
+    width: 150px;
+    height: 4px;
+    margin: 0 auto;
+}
+
+.call-to-action-2 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33px;
+    margin-bottom: 12px;
+}
+
+.call-to-action-button a{
+    display: inline-block;
+    padding: 20px 28px;
+    font-size: 16px;
+    font-family: 'montserrat',sans-serif;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    white-space: nowrap;
+}
+
+
+/* =======================================================================
+Theme CSS - PROCESS
+========================================================================== */
+#theme-our-process{
+    padding: 68px 0px 90px;
+    font-family: 'Roboto',sans-serif;
+}
+
+.process-heading-title{
+    font-size: 29px;
+    line-height: 39px;
+    margin-bottom: 8px;
+}
+
+.process-heading-description{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-family: 'Lato',sans-serif;
+}
+
+/* bullet */
+.theme-process-line{
+    height: 2px;
+    width: 300px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 23px;
+}
+
+.theme-process-line-bullet{
+    height: 5px;
+    width: 80px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: -1px;
+    left: 0;
+    right: 0;
+}
+
+.process-tabs-navigation{
+    width: 29%;
+    display: table-cell;
+    vertical-align: top;
+    padding: 23px 0px;
+}
+
+.list-wrap-content-title{
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 8px;
+}
+
+.list-wrap-content-description{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 29px;
+}
+
+
+/* Nav */
+#process-tabs .nav { 
+    overflow: hidden; 
+}
+
+#process-tabs .nav li a { 
+    display: block;
+    padding: 19px 25px;
+    font-size: 16px;
+}
+
+#process-tabs .nav li a i {
+    font-size: 18px !important;
+    margin-right: 9px;
+}
+
+/* =======================================================================
+Theme CSS - SKILLS
+========================================================================== */
+#theme-skills{
+    padding: 61px 0px 84px;
+    font-family: 'Roboto',sans-serif;
+}
+
+.skills-heading-title{
+    font-size: 28px;
+    line-height: 37px;
+}
+
+
+/* ACCORDION */
+#skills-accordion .accordion li h3 a{
+    border-bottom: 0px;
+    font-size: 17px;
+    padding: 12px 25px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    display: block;
+}
+
+#skills-accordion .accordion li h3 a:after{
+    font-family: 'FontAwesome';
+    content: "\f107";
+    float: right;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#skills-accordion .accordion li.active h3 a:after{
+    content: "\f106";
+}
+
+#skills-accordion .accordion .panel{
+    padding: 16px 23px 22px;
+    font-size: 16px;
+    font-weight: 300;
+    border-top: 0px;
+    border-bottom: 0px;
+    line-height: 26px;
+}
+
+.progress-title {
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+
+#skills-progress .default{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    height: 16px;       
+}
+
+#skills-progress .progress-width{
+    height: 100%;
+    text-align: right;
+    font-size: 15px;
+    font-family: 'Roboto',sans-serif;
+    width: 0;
+    position: relative;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+#skills-progress .progress-width span:before{
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    margin-left: -3px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 3px 0 3px;
+}
+
+#skills-progress .progress-width span{
+    position: absolute;
+    right: -16px;
+    top: -40px;
+    padding: 5px 8px;
+    font-size: 14px;
+}
+
+/* =======================================================================
+Theme CSS - FUN FACTS
+========================================================================== */
+#theme-fun-facts{
+    padding: 75px 0px 90px;
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+}
+
+/* TIMER AND ICONS */
+.fun-time {
+    font-size: 42px;
+}
+
+.fun-title {
+    margin-top: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* =======================================================================
+Theme CSS - TEAN
+========================================================================== */
+#theme-team{
+    padding: 68px 0px 99px;
+    font-family: 'Roboto',sans-serif;
+}
+
+.team-heading-title{
+    font-size: 29px;
+    line-height: 39px;
+    margin-bottom: 8px;
+}
+
+.team-heading-description{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-family: 'Lato',sans-serif;
+}
+
+
+/* bullet */
+.theme-team-line{
+    height: 2px;
+    width: 300px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 23px;
+}
+
+.theme-team-line-bullet{
+    height: 5px;
+    width: 80px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: -1px;
+    left: 0;
+    right: 0;
+}
+
+.theme-team-slider .slick-dots li button:before{
+    font-size: 10px;
+}
+
+.team-name {
+    font-size: 19px;
+    margin-bottom: 5px;
+    line-height: 29px;
+}
+
+.team-job{
+    font-size: 17px;
+    line-height: 23px;
+}
+
+.team-image-hover {
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s  ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+.team-image-caption-button a i{
+    border-radius: 50%;
+    font-size: 17px;
+    width: 43px;
+    height: 43px;
+    display: table-cell;
+    vertical-align: middle;
+    transition: ease .4s;
+    -webkit-transition: ease .3s;
+    -moz-transition: ease .3s;
+}
+
+/* =======================================================================
+Theme CSS - TESTIMONIALS
+========================================================================== */
+#theme-testimonials{
+    padding: 70px 0px 108px;
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+}
+
+/* HEADING */
+.theme-testimonials-heading{
+    font-size: 29px;
+    line-height: 41px;
+    margin-bottom: 50px;
+    font-family: 'montserrat',sans-serif;
+}
+
+.theme-testimonials-slider .slick-dots li button:before{
+    font-size: 10px;
+}
+
+.testimonial-text {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 35px;
+    margin-bottom: 30px;
+    display: table;
+}
+
+.testimonial-quote-left{
+    display: table-cell;
+    float:left;
+    font-size: 26px;
+}
+
+.testimonial-quote-right{
+    display: table-cell;
+    float:right;
+    font-size: 26px;
+}
+
+.testimonial-info {
+    font-size: 17px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+}
+
+.testimonial-info span{
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+.testimonial-quote-content a:hover{
+    text-decoration: underline;
+}
+
+/* =======================================================================
+Theme CSS - CLIENTS
+========================================================================== */
+#theme-clients{
+    padding: 67px 0px 99px;
+    font-family: 'Roboto',sans-serif;
+}
+
+.clients-heading-title{
+    font-size: 29px;
+    line-height: 39px;
+    margin-bottom: 8px;
+}
+
+.clients-heading-description{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-family: 'Lato',sans-serif;
+}
+
+.theme-clients-line{
+    height: 2px;
+    width: 300px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 23px;
+}
+
+.theme-clients-line-bullet{
+    height: 5px;
+    width: 80px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: -1px;
+    left: 0;
+    right: 0;
+}
+
+.theme-clients-slider .slick-dots li button:before{
+    font-size: 10px;
+}
+
+/* =======================================================================
+Theme CSS - CALL TO ACTION FOOTER
+========================================================================== */
+#theme-call-to-action-footer{
+    font-family: 'Roboto',sans-serif;
+    padding: 38px 0px 51px;
+}
+
+.call-to-action-footer-1{
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.call-to-action-footer-2{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+    margin-top: 1px;
+}
+
+.call-to-action-footer-button a{
+    display: inline-block;
+    white-space: nowrap;
+    padding: 16px 24px;
+    font-size: 17px;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+
+
+/* =======================================================================
+Theme CSS - FOOTER
+========================================================================== */
+#theme-footer{
+    padding: 76px 0px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    -webkit-transform: translateZ(0px);
+}
+
+/* HEADING */
+.theme-footer-heading-title{
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+/* CONTENT */
+.theme-footer-container{
+    margin-top: 20px;
+    font-weight: 300;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.footer-content-static-links ul li{
+    margin-bottom: 10px;
+    padding-bottom: 13px;
+}
+
+.contact-icon{
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+/* =======================================================================
+Theme CSS - FOOTER COPYRIGHT
+========================================================================== */
+#theme-footer-copyright{
+    font-family: 'Roboto',sans-serif;
+    padding: 28px 0px;
+    font-size: 16px;
+    font-weight: 300;
+    -webkit-transform: translateZ(0px);
+}
+
+.theme-footer-social ul li a{
+    padding: 6px 10px;
+    display: inline-block;
+    white-space: nowrap;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+}
+
+/* =======================================================================
+Theme CSS - PERMALINK POST
+========================================================================== */
+#theme-permalink-post{
+    font-family: 'Roboto',sans-serif;
+    padding: 65px 0px 70px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.theme-permalink-post-box{
+    display: table;
+    width: 100%;
+}
+
+#text_answer_page_chat{
+    padding: 0px !important;
+}
+
+.text_answer_page_chat_info{
+    padding: 13px 30px 33px !important;
+    -webkit-transform: translateZ(0px);
+}
+
+.theme-permalink-post-box-caption{
+    display: table-cell;
+    width: 46%;
+    vertical-align: top;
+    padding: 25px 34px 35px;
+}
+
+.theme-permalink-post-box-text {
+    line-height: 28px;
+    padding-bottom: 18px;
+}
+
+.theme-permalink-post-box-info{
+    margin-top: 12px;
+    padding-bottom: 13px;
+}
+
+.theme-permalink-post-box-info-heading{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+
+.theme-permalink-post-box-info-content i {
+    margin-right: 5px;
+}
+
+.theme-permalink-post-box-info-heading i{
+    margin-right: 3px;
+}
+
+
+a.tagitem:hover{
+    text-decoration: underline;
+}
+
+.theme-permalink-post-button .right a {
+    padding: 5px 8px;
+    display: inline-block;
+    border-radius: 3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    margin-left: 1px;
+}
+
+.theme-permalink-next-previous a{
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+a.linktosite{
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    display: inline-block;
+    padding: 9px 15px;
+    margin-top: 7px;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+#text_answer_page_chat .theme-permalink-post-box-text blockquote{
+    margin: 14px 0px 15px 15px;
+    padding: 0px 0px 0px 21px;
+}
+
+.theme-permalink-post-box-text h1{
+    font-size: 21px;
+    font-weight: 400;
+    padding-top: 0px;
+    margin-bottom: 8px;
+}
+
+.theme-permalink-post-box-text h2{
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 0px;
+    margin-bottom: 8px;
+}
+
+.theme-permalink-post-box-text h3{
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    padding-top: 0px;
+}
+
+.theme-permalink-post-box-text h4{
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 6px;
+    font-weight: 400;
+    padding-top: 0px;
+}
+
+.theme-permalink-post-box-text h5{
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    padding-top: 0px;
+}
+
+.theme-permalink-post-box-text h6{
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    padding-top: 0px;
+}
+
+#text_answer_page_chat .theme-permalink-post-box-text pre{
+    padding: 17px 19px;
+}
+
+/* NOTES */
+.theme-post-notes{
+    margin-top: 45px;
+    padding:29px 28px;
+}
+
+.theme-post-notes a:hover{
+    text-decoration: underline;
+}
+
+/* DISQUS */
+.theme-post-disqus{
+    padding: 29px 33px;
+    margin-top: 45px;
+}
+
+.theme-post-disqus a:hover{
+    text-decoration: underline;
+}
+
+.chat_post .label {
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+.quote_post {
+    padding: 30px 40px;
+}
+
+.link_post {
+    transition: all 0.3s ease 0s;
+    padding: 34px 40px 35px;
+    cursor: pointer;
+}
+
+.link_post a{
+    display: block;
+}
+
+#theme-posts .grid_12 .theme-posts-item-content{
+    position: relative;
+}
+
+.permalink_button{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    font-size: 15px;
+}
