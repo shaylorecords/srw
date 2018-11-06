@@ -8,7 +8,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 repository that is by invitation only. You will get a 404 - Not Found if you do
 not have access**
 
-## [1.0.0](http://shaylorecords.tumblr.com)  - 2018-08-08
+## [v1.0.3](https://github.com/shaylorecords/srw/releases/tag/v1.0.3)  - 2018-06-08
+
+### Added
+* Fonts
+
+---
+
+## [v1.0.2](https://github.com/shaylorecords/srw/releases/tag/v1.0.2)  - 2018-06-08
+
+### Added
+* Fonts
+
+---
+
+## [v1.0.1](https://github.com/shaylorecords/srw/releases/tag/v1.0.1)  - 2018-06-08
 
 ### Added
 * Terms of Use
