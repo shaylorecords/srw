@@ -9,10 +9,11 @@ not have access**
 ## [v1.0.4](https://github.com/shaylorecords/srw/releases/tag/v1.0.4)  - 2018-06-08
 
 ### Added
-* Fonts directory structure for CSS
+* Waypoints
 
 ### Fixed
 * Artists Alumni Section
+* Fonts directory structure for CSS
 
 ---
 
