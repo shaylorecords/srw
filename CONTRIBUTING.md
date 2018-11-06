@@ -4,13 +4,9 @@ Looking to contribute something to Shaylo Records? **Here's how you can help.**
 
 ## Quick start
 
-We only accept issues that are icon requests, bug reports, or feature requests.
-Bugs must be isolated and reproducible problems that we can fix within the Font
-Awesome core.
-
-* [Request a new icon]()
-* [Request a new feature]()
-* [Submit a bug report]()
+We only accept issues that are coding requests, bug reports, or feature requests.
+Bugs must be isolated and reproducible problems that we can fix within the Shaylo
+Records core.
 
 ## Key branches
 
