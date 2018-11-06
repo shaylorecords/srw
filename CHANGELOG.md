@@ -10,6 +10,7 @@ not have access**
 
 ### Added
 * Fonts
+* Fonts directory structure for CSS
 
 ---
 
