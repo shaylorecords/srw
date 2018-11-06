@@ -6,6 +6,16 @@ All notable changes to this project will be documented in this file.
 repository that is by invitation only. You will get a 404 - Not Found if you do
 not have access**
 
+## [v1.0.4](https://github.com/shaylorecords/srw/releases/tag/v1.0.4)  - 2018-06-08
+
+### Added
+* Fonts directory structure for CSS
+
+### Fixed
+* Artists Alumni Section
+
+---
+
 ## [v1.0.3](https://github.com/shaylorecords/srw/releases/tag/v1.0.3)  - 2018-06-08
 
 ### Added
