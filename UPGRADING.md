@@ -4,11 +4,9 @@ See the [CHANGELOG.md](./CHANGELOG.md) for detailed information about what has c
 
 This guide is useful to figure out what you need to do between breaking changes.
 
-As always, [submit issues]() that you run into with this guide or with these upgrades to us.
-
 ---
 
-## 0.0.x to 1.0.0
+## 1.0.x to 1.0.4
 
 There are no breaking changes in this version upgrade.
 
