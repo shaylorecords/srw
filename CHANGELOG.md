@@ -8,8 +8,9 @@ not have access**
 
 ## [v1.0.6](https://github.com/shaylorecords/srw/releases/tag/v1.0.6)  - 2018-11-08
 
-### Fixed
-* OC Avatar
+### Added
+* Avatar - CielA
+* Music Services - YouTube Music
 
 ---
 
