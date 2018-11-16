@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 repository that is by invitation only. You will get a 404 - Not Found if you do
 not have access**
 
+## [v1.0.7](https://github.com/shaylorecords/srw/releases/tag/v1.0.7)  - 2018-15-08
+
+### Added
+* Re-pushed
+
+---
+
 ## [v1.0.6](https://github.com/shaylorecords/srw/releases/tag/v1.0.6)  - 2018-11-08
 
 ### Added
