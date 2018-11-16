@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 repository that is by invitation only. You will get a 404 - Not Found if you do
 not have access**
 
+## [v1.0.8](https://github.com/shaylorecords/srw/releases/tag/v1.0.8)  - 2018-15-08
+
+### Added
+* CSS - Fonts updated
+
+---
+
 ## [v1.0.7](https://github.com/shaylorecords/srw/releases/tag/v1.0.7)  - 2018-15-08
 
 ### Added
