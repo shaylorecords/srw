@@ -2,6 +2,6 @@ Shaylo Records (formerly known as Shaylo Family) is an American record label fou
 
 # Connect with Shaylo Records
 https://www.instagram.com/shaylorecords  
-https://soundcloud.com/shaylorecords  
 https://twitter.com/ShayloRecords  
+https://soundcloud.com/shaylorecords  
 https://www.facebook.com/ShayloReocrds  
