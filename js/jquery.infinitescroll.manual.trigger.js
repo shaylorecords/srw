@@ -1,17 +1,8 @@
-/*
-	--------------------------------
-	Infinite Scroll Behavior
-	Manual / Twitter-style
-	--------------------------------
-	+ https://github.com/paulirish/infinitescroll/
-	+ version 2.0b2.110617
-	+ Copyright 2011 Paul Irish & Luke Shumard
-	+ Licensed under the MIT license
-	
-	+ Documentation: http://infinite-scroll.com/
-	
-*/
-
+/**
+ * Modified by Shaylo Family.
+ * Manual / Twitter-style
+ * v2.0b2.110617
+ */
 (function($, undefined) {
 	$.extend($.infinitescroll.prototype,{
 
