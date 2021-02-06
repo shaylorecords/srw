@@ -1,135 +1,144 @@
-/*jshint browser:true */
-/*global define, jQuery, window */
-
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
-    } else {
-        // Browser globals
-        factory(jQuery);
-    }
-}(function ($) {
+/**
+ * Modified by Shaylo Family.
+ * organicTabs
+ * v1.1.0
+ * Copyright (c) 2010 Chris/Lance
+ */
+(function($) {
 
     $.organicTabs = function(el, options) {
-    
         var base = this;
         base.$el = $(el);
-        base.$nav = base.$el.find(".nav");
 
         base.init = function() {
-        
+
             base.options = $.extend({},$.organicTabs.defaultOptions, options);
-            
-            // Accessible hiding fix
-            $(".hide").css({
-                "position": "relative",
-                "top": 0,
-                "left": 0,
-                "display": "none"
-            }); 
-            
-            base.$nav.on("click", "li > a", function() {
 
-                // Figure out current list via CSS class
-                var curList = base.$el.find("a.current").attr("href").substring(1),
-                
-                // List moving to
-                    $newList = $(this),
-                    
+            base.$nav = base.$el.find(base.options.headingsSelector);
+            base.$nav.delegate("li a", "click", function() {
                 // Figure out ID of new list
-                    listID = $newList.attr("href").substring(1),
-                
-                // Set outer wrapper height to (static) height of current inner list
-                    $allListWrap = base.$el.find(".list-wrap"),
-                    curListHeight = $allListWrap.height();
-                    $allListWrap.height(curListHeight);
+                var listID = $(this).attr("href").substring(1);
 
-                if ((listID != curList) && ( base.$el.find(":animated").length == 0)) {
-                                            
-                    // Fade out current list
-                    base.$el.find("#"+curList).fadeOut(base.options.speed, function() {
-                        
-                        // Fade in new list on callback
-                        base.$el.find("#"+listID).fadeIn(base.options.speed);
-                        
-                        // Adjust outer wrapper to fit new list snuggly
-                        var newHeight = base.$el.find("#"+listID).height();
-                        $allListWrap.animate({
-                            height: newHeight
-                        });
-                        
-                        // Remove highlighting - Add to just-clicked tab
-                        base.$el.find(".nav li a").removeClass("current");
-                        $newList.addClass("current");
-                            
-                    });
+                // Change to tab
+                base.changeTo(listID);
 
-                    // Update URL bar, retain state
-                    window.history.pushState({ 
-                        'organictabsState': listID 
-                        }, 
-                    window.document.title, window.location.pathname + "#!" + listID);
-                }   
-                
                 // Don't behave like a regular link
-                // Stop propegation and bubbling
+                // Stop propagation and bubbling
                 return false;
             });
-            
+
         };
         base.init();
 
-        // check for window.state, if exists then activate
-                
-        if(window.history.state && window.history.state.length !==0){
-            if("organictabsState" in window.history.state){ // check for the organictabsState key
-                // pull back in all of the var declarations so that they're accessible at start
-                curList = base.$el.find("a.current").attr("href").substring(1);
-                stateID = window.history.state.organictabsState;
-                $allListWrap = base.$el.find(".list-wrap"),
-                curListHeight = $allListWrap.height();
-                $allListWrap.height(curListHeight);
+        // Save the organicTabs instance into the DOM element properties so that we can call methods on it later on
+        el.organicTabs = base;
+    };
 
-                if (window.history.state.organictabsState != curList) {
+    /* changeTo - Change the current tab to given tab
+     *
+     * @param   tabID   (String)  The ID of the tab to change to
+     */
+    $.organicTabs.prototype.changeTo = function(tabID) {
+        var self = this;
 
-                                            
-                    // Fade out current list
-                    base.$el.find("#"+curList).fadeOut("fast", function() {
-                        
-                        // Fade in new list on callback
-                        base.$el.find("#"+stateID).fadeIn("fast");
-                        
-                        // Adjust outer wrapper to fit new list snuggly
-                        var newHeight = base.$el.find("#"+stateID).height();
-                        $allListWrap.animate({
-                            height: newHeight
-                        });
-                        
-                        // Cycle through nav options, add class=current to organictabsState and remove from others
-                        base.$el.find(".nav li a").each(function(){
-                            $(this).attr("href") === "#" + stateID ? $(this).addClass("current") : $(this).removeClass("current");
-                        });
-                            
+        // Figure out current list via CSS class
+        var curList = self.currentTab();
+
+        // List moving to
+        var $newList = self.$el.find(self.options.headingsSelector + " a[href='#" + tabID + "']");
+
+        // Set outer wrapper height to (static) height of current inner list
+        var $allListWrap = self.$el.find(self.options.contentsSelector);
+        curListHeight = $allListWrap.height();
+
+        $allListWrap.height(curListHeight);
+
+        if ((curList.length > 0) && (tabID.length > 0) && (tabID != curList) && ( self.$el.find(":animated").length === 0))
+        {
+            // Fade out current list
+            self.$el.find(self.options.contentsSelector + " #" + curList).fadeOut(self.options.fadingSpeed, self.options.fadingEasing, function() {
+                // Fade in new list on callback
+                var $listEl = self.$el.find(self.options.contentsSelector + " #" + tabID);
+                $listEl.fadeIn(self.options.fadingSpeed, self.options.fadingEasing);
+
+                // Adjust outer wrapper to fit new list snuggly
+                var newHeight = $listEl.height();
+
+                if(self.options.updateAlong !== null) {
+                    $(self.options.updateAlong).each(function(index, el) {
+                        $(el).animate({
+                            height: $(el).height() - curListHeight + newHeight
+                        }, self.options.sizingSpeed,self.options.sizingEasing);
                     });
                 }
-            }
+
+                $allListWrap.animate({
+                    height: newHeight
+                }, self.options.sizingSpeed, self.options.sizingEasing, function() {
+                    // Trigger the "tab changed" event when it's fully changed
+                    self.$el.triggerHandler("organicTabs.changed", [tabID, $listEl]);
+                });
+
+                // Remove highlighting - Add to just-clicked tab
+                self.$el.find(self.options.headingsSelector + " li a").removeClass("current");
+                $newList.addClass("current");
+            });
         }
-
-
-
-
-
     };
-    
+
+    /* currentTab - Return the ID of the current tab
+     *
+     * @return ID of the current tab
+     */
+    $.organicTabs.prototype.currentTab = function() {
+        return this.$el.find("a.current").attr("href").substring(1);
+    }
+
+
     $.organicTabs.defaultOptions = {
-        "speed": 300
-    };
-    
-    $.fn.organicTabs = function(options) {
-        return this.each(function() {
-            (new $.organicTabs(this, options));
-        });
+        headingsSelector: ".nav",        // jQuery selector string to find headings list(s) inside the target element
+        contentsSelector: ".list-wrap",  // jQuery selector string to find contents container(s) inside the target element
+
+        updateAlong: null,	      		 // Provide elements to be updated along with the regular wrapper. It's useful in
+        // nesting cases when you want a parent element to be resized correctly
+
+        fadingSpeed: 300,                // Speed of fading animations
+        fadingEasing: "swing",           // Easing used for fading animations
+
+        sizingSpeed: 300,                // Speed of resizing animations
+        sizingEasing: "swing"            // Easing used for resizing animations
     };
 
-}));
+    $.fn.organicTabs = function(args) {
+        // Turn arguments into an Array object
+        var organicArgs = Array.prototype.slice.call(arguments);
+
+        // Initialize the tabs if first arg is not a string
+        if (typeof args !== "string")
+        {
+            return this.each(function() {
+                new $.organicTabs(this, args);
+            });
+        }
+        // If it is a string, it's a method name, so we invoke it on the first matched object
+        // and return the result of the function call
+        else
+        {
+            methodName = organicArgs.shift();
+            return this[0].organicTabs[methodName].apply(this[0].organicTabs, organicArgs);
+        }
+    };
+
+    /*
+     * Automatically apply tabs on DOM having the data-organic-tabs="organic" attribute
+     */
+    $(function () {
+        $('[data-organic-tabs="organic"]').each(function () {
+            var $tabs = $(this);
+
+            // TODO: make it possible to declare options through data-organic-tabs-* attributes?
+            $tabs.organicTabs();
+        });
+    });
+
+})(jQuery);
