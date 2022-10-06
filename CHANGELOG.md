@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 repository that is by invitation only. You will get a 404 - Not Found if you do
 not have access**
 
-## [v1.2.0](https://github.com/shaylorecords/srw/releases/tag/v1.0.9)  - 2018-16-12
+## [v1.2.0](https://github.com/shaylorecords/srw/releases/tag/v1.2.0)  - 2022-06-10
 
 ### Added
 * Music Services - Various Changes
@@ -14,21 +14,21 @@ not have access**
 
 ---
 
-## [v1.1.1](https://github.com/shaylorecords/srw/releases/tag/v1.0.9)  - 2018-16-12
+## [v1.1.1](https://github.com/shaylorecords/srw/releases/tag/v1.1.1)  - 2021-07-02
 
 ### Added
 * Music Services - Various Changes
 
 ---
 
-## [v1.1.0](https://github.com/shaylorecords/srw/releases/tag/v1.0.9)  - 2018-16-12
+## [v1.1.0](https://github.com/shaylorecords/srw/releases/tag/v1.1.0)  - 2021-05-02
 
 ### Added
 * Music Services - Various Changes
 
 ---
 
-## [v1.0.9](https://github.com/shaylorecords/srw/releases/tag/v1.0.9)  - 2018-16-12
+## [v1.0.9](https://github.com/shaylorecords/srw/releases/tag/v1.0.9)  - 2020-26-01
 
 ### Added
 * CSS - Fonts updated
