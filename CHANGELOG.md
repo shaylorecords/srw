@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 repository that is by invitation only. You will get a 404 - Not Found if you do
 not have access**
 
+## [v1.2.2](https://github.com/shaylorecords/srw/releases/tag/v1.2.2)  - 11-16-2022
+
+### Added
+* Avatar - Kasi
+* Changelog - Updated to v1.2.2
+
+---
+
 ## [v1.2.1](https://github.com/shaylorecords/srw/releases/tag/v1.2.1)  - 11-16-2022
 
 ### Added
